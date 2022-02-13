@@ -1,0 +1,54 @@
+<!-- 
+    This file shows how the Vue3 uses a custom setter 
+    to update instantly de DOM with new data
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Update DOM Vue3</title>
+    </head>
+
+    <body>
+        <p>Reactivity: Vue3</p>
+        <h1 id="h1">???</h1>
+
+        <script>
+            let info = {
+                msg: 'send me to the H1 tag',
+                num: 10,
+                test(){
+                    console.log(this.msg)
+                }
+            }
+            // simple setting of the h1 tag text
+            document.getElementById('h1').innerText = info.msg
+
+            /**
+             * In order to make it reactive, we need to capture the setter 
+             * of the message property;
+             * We use the Proxy and Reflect ES6 features to create a proxy for
+             * the entire object.
+             */
+            let info_proxy = new Proxy(info, {
+                get(target, prop, receiver){
+                    if (typeof target[prop] == `string`) {
+                        return target[prop] + ' returned by proxy getter!'
+                    }
+                    return Reflect.get(...arguments)
+                },
+                set(target, prop, newVal, receiver){
+                    if (typeof target[prop] == `string`) {
+                        newVal = newVal + ' returned by proxy setter'
+                    }
+                    document.getElementById('h1').innerText = newVal
+                    Reflect.set(...arguments)
+                }
+            })
+        </script>
+    </body>
+
+</html>
