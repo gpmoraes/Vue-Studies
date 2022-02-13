@@ -4,7 +4,7 @@
 
 > Open the **.html** file in the browser
 >
-> Open the terminal and execute the commands below
+> At the browser terminal and execute the commands below:
 >> <code>info.reactive_msg = 'okay'</code>
 >>
 >> The innerText of the **H1** tag will be updated and the new value will be assigned to the **msg** property.
@@ -14,7 +14,7 @@
 
 > Open the **.html** file in the browser
 >
-> Open the terminal and execute the commands below
+> At the browser terminal the commands below:
 >> <code>info_proxy.msg</code>
 >> **Return**
 >> <code>"send me to the H1 tag returned by proxy getter!"</code>
