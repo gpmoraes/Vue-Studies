@@ -1,6 +1,6 @@
 # Vue-Studies
 
-## Steps to execute the tests on **UpdateDOMVue2**
+## Steps to execute the tests in the **UpdateDOMVue2**
 
 > Open the .html file in the browser
 >
