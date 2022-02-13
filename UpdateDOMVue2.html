@@ -1,0 +1,44 @@
+<!-- 
+    This file shows how the Vue2 uses a custom setter 
+    to update instantly de DOM with new data
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update DOM Vue2</title>
+</head>
+<body>
+    <p>Reactivity: Vue2</p>
+    <h1 id="h1">???</h1>
+
+    <script>
+        // initial val and value storage
+        let info = {
+            msg: 'sen me to the H1 tag'
+        }
+        // simple setting of the h1 tag text
+        document.getElementById('h1').innerText = info.msg
+
+        /**
+         * In order to make it reactive, we need to capture the setter 
+         * of the message property;
+         * We use the defineProperty method that allows us to set a custimized setter 
+         * and getter.
+         */
+        Object.defineProperty(info, 'reactive_msg', {
+            get(){
+                // triggered when we read the rective_msg property
+                return info.msg
+            },
+            set(newVal){
+                // triggered when we assign a value to the reactive_msg property
+                document.getElementById('h1').innerText = newVal
+                info.msg = newVal
+            }
+        })
+    </script>
+</body>
+</html>
