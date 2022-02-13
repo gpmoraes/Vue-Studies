@@ -52,8 +52,11 @@
 >> **RETURN**: <code>{ city: "London" }</code>
 
 >> Settin a new value to the city name:
+>> 
 >> <code>instance_bS.city = 'okay'</code>
 
+>> Checking the values:
+>> 
 >> <code>instance_aS</code>
 >> 
 >> **RETURN**: <code>{ city: "okay" }</code>
