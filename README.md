@@ -39,6 +39,9 @@
 > Open the **.html** file in the browser
 >
 > At the browser terminal the commands below:
+
+### Singleton Pattern
+
 >> <code>instance_aS</code>
 >> 
 >> **RETURN**: <code>{ city: "London" }</code>
@@ -68,3 +71,30 @@
 >> <code>info</code>
 >> 
 >> **RETURN**: <code>{ city: "okay" }</code>
+
+
+
+### Factory Pattern
+
+>> <code>instance_aF</code>
+>> 
+>> **RETURN**: <code>{ city: "London" }</code>
+>> 
+>> <code>instance_bF</code>
+>> 
+>> **RETURN**: <code>{ city: "London" }</code>
+
+>> Settin a new value to the city name:
+>> 
+>> <code>instance_bF.city = 'okay'</code>
+
+>> Checking the values:
+>> 
+>> <code>instance_aF</code>
+>> 
+>> **RETURN**: <code>{ city: "London" }</code>
+>> 
+>> <code>instance_bF</code>
+>> 
+>> **RETURN**: <code>{ city: "okay" }</code>
+
