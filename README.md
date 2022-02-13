@@ -17,27 +17,19 @@
 > At the browser terminal the commands below:
 >> <code>info_proxy.msg</code>
 >> 
->> **Return**
->> 
->> <code>"send me to the H1 tag returned by proxy getter!"</code>
+>> **RETURN**: send me to the H1 tag returned by proxy getter!
 >> 
 >> <code>info_proxy.msg = 'okay'</code>
 >> 
->> **Return**
+>> **RETURN**: okay returned by proxy setter
 >> 
->> <code>"okay returned by proxy setter"</code>
->> The innerText of the **H1** tag will be updated and the new value will be assigned to the **msg** property.
+>>>> The innerText of the **H1** tag will be updated and the new value will be assigned to the **msg** property.
 >> It means that the innerText of the **H1** tag is sync with the **msg** property.
->> 
 >> 
 >> <code>info_proxy.num</code>
 >> 
->> **Return**
->> 
->> <code>"10"</code>
+>> **RETURN**: 10
 >> 
 >> <code>info_proxy.num++</code>
 >> 
->> **Return**
->> 
->> <code>"11"</code>
+>> **RETURN**: 11
