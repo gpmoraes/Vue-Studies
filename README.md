@@ -1,6 +1,6 @@
 # Vue-Studies
 
-## Steps to execute the tests in the **UpdateDOMVue2**
+## Steps to execute the tests in the **updateDOMVue2**
 
 > Open the **.html** file in the browser
 >
@@ -10,7 +10,7 @@
 >> The innerText of the **H1** tag will be updated and the new value will be assigned to the **msg** property.
 >> It means that the innerText of the **H1** tag is sync with the **msg** property.
 
-## Steps to execute the tests in the **UpdateDOMVue3**
+## Steps to execute the tests in the **updateDOMVue3**
 
 > Open the **.html** file in the browser
 >
@@ -33,3 +33,35 @@
 >> <code>info_proxy.num++</code>
 >> 
 >> **RETURN**: 11
+
+## Steps to execute the tests in the **singletonAndFactory**
+
+> Open the **.html** file in the browser
+>
+> At the browser terminal the commands below:
+>> <code>instance_aS</code>
+>> 
+>> **RETURN**: <code>{ city: "London" }</code>
+>> 
+>> <code>instance_bS</code>
+>> 
+>> **RETURN**: <code>{ city: "London" }</code>
+>> 
+>> <code>info</code>
+>> 
+>> **RETURN**: <code>{ city: "London" }</code>
+
+>> Settin a new value to the city name:
+>> <code>instance_bS.city = 'okay'</code>
+
+>> <code>instance_aS</code>
+>> 
+>> **RETURN**: <code>{ city: "okay" }</code>
+>> 
+>> <code>instance_bS</code>
+>> 
+>> **RETURN**: <code>{ city: "okay" }</code>
+>> 
+>> <code>info</code>
+>> 
+>> **RETURN**: <code>{ city: "okay" }</code>
