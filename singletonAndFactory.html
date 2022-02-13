@@ -1,0 +1,54 @@
+<!-- 
+    This file shows us exemples of design pattern
+    singleton and factory pattern
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Patters</title>
+    </head>
+
+    <body>
+        <h1>Singleton and Factory Pattern</h1>
+        <p>Shared by all or one for each.</p>
+
+        <script>
+
+            /**
+             * In the singleton pattern all the instances share the same
+             * memory address of the object info.
+             * If we change the name of the city in 'instance_bS' it will be modified in 
+             * 'instance_aS' and in the variable 'info'.
+             * This garantees data consistency.
+             */
+            let info = {
+                city: 'London'
+            }
+            
+            let instance_aS = info
+            let instance_bS = info
+
+            /**
+             * In the factory pattern every time that we run the 'info_factory' function
+             * a new object is instanciated with a new memory address.
+             * If we change the name of the city in 'instance_b' the variable 'instance_a'
+             * will not be afected, because they are diferent objects.
+             * This garantees data independece.
+             */
+            function info_factory(){
+                return {
+                    city: 'London'
+                }
+            }
+
+            let instance_aF = info_factory()
+            let instance_bF = info_factory()
+
+        </script>
+    </body>
+
+</html>
