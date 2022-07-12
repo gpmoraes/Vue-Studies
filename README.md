@@ -1,6 +1,6 @@
 # Vue-Studies
 
-## Steps to execute the tests in the **updateDOMVue2**
+## Steps to execute tests - **updateDOMVue2.html**
 
 > Open the **.html** file in the browser
 >
@@ -10,7 +10,7 @@
 >> The innerText of the **H1** tag will be updated and the new value will be assigned to the **msg** property.
 >> It means that the innerText of the **H1** tag is sync with the **msg** property.
 
-## Steps to execute the tests in the **updateDOMVue3**
+## Steps to execute tests - **updateDOMVue3.html**
 
 > Open the **.html** file in the browser
 >
@@ -34,7 +34,7 @@
 >> 
 >> **RETURN**: 11
 
-## Steps to execute the tests in the **singletonAndFactory**
+## Steps to execute tests - **singletonAndFactory.html**
 
 > Open the **.html** file in the browser
 >
