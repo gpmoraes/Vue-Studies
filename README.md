@@ -2,99 +2,118 @@
 
 ## Steps to execute tests - **updateDOMVue2.html**
 
-> Open the **.html** file in the browser
+> Execute the **.html** file.
 >
-> At the browser terminal and execute the commands below:
+><img src="img/page00.png"/>
+
+> Open the browser terminal, and in the tab **Console** execute the command below:
 >> <code>info.reactive_msg = 'okay'</code>
 >>
->> The innerText of the **H1** tag will be updated and the new value will be assigned to the **msg** property.
+>> The innerText of the **H1** tag, will be updated and the new value will be assigned to the **msg** property.
 >> It means that the innerText of the **H1** tag is sync with the **msg** property.
+<img src="img/page01.png"/>
 
 ## Steps to execute tests - **updateDOMVue3.html**
 
-> Open the **.html** file in the browser
+
+> Open the **.html** file.
 >
-> At the browser terminal the commands below:
+><img src="img/page02.png"/>
+
+> Open the browser terminal, and in the tab **Console** execute the command below:
 >> <code>info_proxy.msg</code>
+>>
+>> <img src="img/page03.png"/>
 >> 
 >> **RETURN**: send me to the H1 tag returned by proxy getter!
 >> 
+>>>> In this case, the proxy getter returned the **H1** tag text (**send me to the H1 tag**) + the guetter text (**returned by proxy getter!**).
+>>
+>> Now if i send a new command setting a new value:
+>>
 >> <code>info_proxy.msg = 'okay'</code>
->> 
+>>
+>> <img src="img/page04.png"/>
+>>
 >> **RETURN**: okay returned by proxy setter
 >> 
 >>>> The innerText of the **H1** tag will be updated and the new value will be assigned to the **msg** property.
 >> It means that the innerText of the **H1** tag is sync with the **msg** property.
+>>
+>> I can check the value of the **num** property.
 >> 
 >> <code>info_proxy.num</code>
+>>
+>> <img src="img/page05.png"/>
+>>
 >> 
 >> **RETURN**: 10
 >> 
+>> And i can set a new value to this property, as i did with the **msg** property
+>> 
 >> <code>info_proxy.num++</code>
+>>
+>> <img src="img/page06.png"/>
+>>
 >> 
 >> **RETURN**: 11
 
 ## Steps to execute tests - **singletonAndFactory.html**
 
-> Open the **.html** file in the browser
+> Open the **.html** file
 >
-> At the browser terminal the commands below:
+> Open the browser terminal, and in the tab **Console** execute the command below:
 
 ### Singleton Pattern
 
 >> <code>instance_aS</code>
+>>
+>> <img src="img/page07.png"/>
 >> 
->> **RETURN**: <code>{ city: "London" }</code>
 >> 
 >> <code>instance_bS</code>
->> 
->> **RETURN**: <code>{ city: "London" }</code>
+>>
+>> <img src="img/page08.png"/>
+>>
 >> 
 >> <code>info</code>
->> 
->> **RETURN**: <code>{ city: "London" }</code>
-
->> Settin a new value to the city name:
+>>
+>> <img src="img/page09.png"/>
+>>
+>> Setting a new value to the city name:
 >> 
 >> <code>instance_bS.city = 'okay'</code>
-
+>>
 >> Checking the values:
 >> 
->> <code>instance_aS</code>
->> 
->> **RETURN**: <code>{ city: "okay" }</code>
->> 
->> <code>instance_bS</code>
->> 
->> **RETURN**: <code>{ city: "okay" }</code>
->> 
+>> <code>instance_aS, </code>
+>> <code>instance_bS, </code>
 >> <code>info</code>
 >> 
->> **RETURN**: <code>{ city: "okay" }</code>
-
+>> <img src="img/page10.png"/>
+>>
+>> 
 
 
 ### Factory Pattern
 
 >> <code>instance_aF</code>
 >> 
->> **RETURN**: <code>{ city: "London" }</code>
+>> <img src="img/page11.png"/>
+>>
 >> 
 >> <code>instance_bF</code>
 >> 
->> **RETURN**: <code>{ city: "London" }</code>
-
+>> <img src="img/page12.png"/>
+>>
 >> Settin a new value to the city name:
 >> 
 >> <code>instance_bF.city = 'okay'</code>
-
+>>
 >> Checking the values:
 >> 
->> <code>instance_aF</code>
->> 
->> **RETURN**: <code>{ city: "London" }</code>
->> 
+>> <code>instance_aF, </code>
 >> <code>instance_bF</code>
 >> 
->> **RETURN**: <code>{ city: "okay" }</code>
+>> <img src="img/page13.png"/>
 
