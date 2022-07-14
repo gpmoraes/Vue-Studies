@@ -1,0 +1,51 @@
+<!-- 
+    This file shows how we can trontrol HTML
+    atributes with Vue the v-bind directive
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>V-Bind directive controlling</title>
+    </head>
+
+    <body>
+        <!--
+         The vue directive value offers access to que root level 
+         of the component instance, just like the mustache tag does.
+         Vue properties are visible in directive values.
+        -->
+        <div id="vue_app">
+            <!--
+             The title propertie value has now be assigned 
+             to the title atribute of the H2 tag.
+             The directive value is a scope where we can define js expressions
+             like .toUpperCase() for exemple.
+            -->
+            <h2 v-bind:title="title.toUpperCase()">{{ msg }}</h2>
+            <!-- 
+             A vue directive are made of three parts: v_dir_name:dir_arg = dir_val 
+             Any HTML attribute with v-bind directive stops being a HTML attribute and
+             becomes a argument of the v-bind directive, the v-bind arguments are named
+             as same as HTML attributes.
+            -->
+            <input type="text" :value="msg" v-bind:disable="false">
+        </div>
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script>
+            let app = Vue.createApp({
+                data() {return{
+                    title: 'control HTML attributes using v-bind',
+                    msg: 'Vue directives: v-bind'
+                }}
+            })
+
+            let vm = app.mount('#vue_app')
+        </script>
+    </body>
+
+</html>

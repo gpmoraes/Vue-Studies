@@ -4,26 +4,26 @@
 
 > Execute the **.html** file.
 >
-><img src="img/page00.png"/>
+><img src="../img/page00.png"/>
 
 > Open the browser terminal, and in the tab **Console** execute the command below:
 >> <code>info.reactive_msg = 'okay'</code>
 >>
 >> The innerText of the **H1** tag, will be updated and the new value will be assigned to the **msg** property.
 >> It means that the innerText of the **H1** tag is sync with the **msg** property.
-<img src="img/page01.png"/>
+<img src="../img/page01.png"/>
 
 ## Steps to execute tests - **updateDOMVue3.html**
 
 
 > Open the **.html** file.
 >
-><img src="img/page02.png"/>
+><img src="../img/page02.png"/>
 
 > Open the browser terminal, and in the tab **Console** execute the command below:
 >> <code>info_proxy.msg</code>
 >>
->> <img src="img/page03.png"/>
+>> <img src="../img/page03.png"/>
 >> 
 >> **RETURN**: send me to the H1 tag returned by proxy getter!
 >> 
@@ -33,7 +33,7 @@
 >>
 >> <code>info_proxy.msg = 'okay'</code>
 >>
->> <img src="img/page04.png"/>
+>> <img src="../img/page04.png"/>
 >>
 >> **RETURN**: okay returned by proxy setter
 >> 
@@ -44,7 +44,7 @@
 >> 
 >> <code>info_proxy.num</code>
 >>
->> <img src="img/page05.png"/>
+>> <img src="../img/page05.png"/>
 >>
 >> 
 >> **RETURN**: 10
@@ -53,7 +53,7 @@
 >> 
 >> <code>info_proxy.num++</code>
 >>
->> <img src="img/page06.png"/>
+>> <img src="../img/page06.png"/>
 >>
 >> 
 >> **RETURN**: 11
@@ -68,17 +68,17 @@
 
 >> <code>instance_aS</code>
 >>
->> <img src="img/page07.png"/>
+>> <img src="../img/page07.png"/>
 >> 
 >> 
 >> <code>instance_bS</code>
 >>
->> <img src="img/page08.png"/>
+>> <img src="../img/page08.png"/>
 >>
 >> 
 >> <code>info</code>
 >>
->> <img src="img/page09.png"/>
+>> <img src="../img/page09.png"/>
 >>
 >> Setting a new value to the city name:
 >> 
@@ -90,7 +90,7 @@
 >> <code>instance_bS, </code>
 >> <code>info</code>
 >> 
->> <img src="img/page10.png"/>
+>> <img src="../img/page10.png"/>
 >>
 >> 
 
@@ -99,12 +99,12 @@
 
 >> <code>instance_aF</code>
 >> 
->> <img src="img/page11.png"/>
+>> <img src="../img/page11.png"/>
 >>
 >> 
 >> <code>instance_bF</code>
 >> 
->> <img src="img/page12.png"/>
+>> <img src="../img/page12.png"/>
 >>
 >> Settin a new value to the city name:
 >> 
@@ -115,5 +115,5 @@
 >> <code>instance_aF, </code>
 >> <code>instance_bF</code>
 >> 
->> <img src="img/page13.png"/>
+>> <img src="../img/page13.png"/>
 
