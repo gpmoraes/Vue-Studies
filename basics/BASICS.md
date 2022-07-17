@@ -117,3 +117,24 @@
 >> 
 >> <img src="../img/page13.png"/>
 
+## Steps to execute tests - **refAttribute.html**
+
+> Open the **.html** file
+>
+> Open the browser terminal, and in the tab **Console** execute the command below:
+>> 
+>> <code>vm.$refs</code> 
+>> 
+>> <img src="../img/page14.png"/>
+>>
+>> We can see the proxy object **$refs** and his two properties, **msg** and **title**. These two property names are the same  as the **ref** values i set in the **h2** and **p** tag. 
+>> The property values are de **DOM** objects of **h2** and **p** tags.
+>> 
+>> <img src="../img/page15.png"/>
+>>
+>> The proxy object in **Vue 3** means reactivity, so the **$refs**'s object properties are all reactive, they all return the latest **DOM** objects.
+>> 
+>> Then if i update the **vm.title** property the return of **$refs** must be the new value:
+>> 
+>> <img src="../img/page16.png"/>
+>>

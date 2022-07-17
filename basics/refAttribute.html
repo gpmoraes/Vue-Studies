@@ -1,0 +1,36 @@
+<!-- 
+    This file shows how we can use the ref attribute
+    it is a unique identifier and helps us to retrieve
+    page elements. Also known as the reference ID it is 
+    used internly by Vue an wont show up in the final render.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>V-Bind directive controlling</title>
+    </head>
+
+    <body>
+        <div id="vue_app">
+            <h2 ref="title" id="h2">{{ title }}</h2>
+            <p ref="msg" id="p">{{ msg }}</p>
+        </div>
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script>
+            let app = Vue.createApp({
+                data() {return{
+                    title: 'ref attribute & vm.$refs',
+                    msg: 'access page elem. & child comp.'
+                }}
+            })
+
+            let vm = app.mount('#vue_app')
+        </script>
+    </body>
+
+</html>
