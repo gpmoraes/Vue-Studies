@@ -1,0 +1,74 @@
+<!-- 
+    This file shows how we can use the v-for loop statment.
+    Can be used to interate arrays or objects.
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+     <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>V-Bind directive controlling</title>
+     </head>
+ 
+     <body>
+         <div id="vue_app">
+             <h2 ref="title" id="h2">{{ title }}</h2>
+            <br>
+            <!-- Array -->
+            <h3>ARRAY []</h3>
+             <ul>
+                 <li v-for="(elem, index) in cities" :key="index">
+                     {{ elem }} <b>{{ index }}</b>
+                 </li>
+             </ul>
+             <br>
+             <!-- Object -->
+            <h3>OBJECT {} - SQL DATABASE</h3>
+              <ul>
+                  <li v-for="(val, prop, index) in car" :key="index">
+                      {{ index }} {{ prop }} {{ val }}
+                  </li>
+              </ul>
+              <ul>
+                  <li v-for="(elem, index) in jsonSQL" :key="index">
+                      {{ elem.brand }} {{ elem.model }} {{ elem.year }}
+                  </li>
+              </ul>
+              <!-- Object -->
+              <h3>OBJECT {} - NOSQL DATABASE</h3>
+                <ul v-for='(elem, index) in json' :key='index'>
+                    <li v-for="(val, prop, index) in elem" :key="index">
+                        {{ prop }}: {{ val }}
+                    </li>
+                </ul>
+         </div>
+ 
+         <script src="https://unpkg.com/vue@next"></script>
+         <script>
+             let app = Vue.createApp({
+                 data() {return{
+                     title: 'v-for: iterate over [] or {}',
+                     cities: ['London', 'Newcastle', 'Durham', 'Sunderland'],
+                     car: {
+                        brand: 'Toyota', model:'Yaris GR', year:2021
+                     },
+                     jsonSQL:[
+                        {brand: 'Toyota', model:'camry', year:2015},
+                        {brand: 'Nissan', model:'GT-R', year:2021},
+                        {brand: 'Honda', model:'NSX', year:2018}
+                     ],
+                     json:[
+                        {brand: 'Toyota', model:'camry', year:2015},
+                        {brand: 'Nissan', model:'GT-R', location:'London'},
+                        {brand: 'Honda', model:'NSX', owner:'Mike'}
+                     ]
+                 }}
+             })
+ 
+             let vm = app.mount('#vue_app')
+         </script>
+     </body>
+ 
+ </html>
