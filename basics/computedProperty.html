@@ -1,0 +1,53 @@
+<!-- 
+    This file shows how we can use the computed properties.
+    They act like an extension of the Data preperties. 
+    We can create new values based on existent Data properties.
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+     <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>V-Bind directive controlling</title>
+     </head>
+ 
+     <body>
+         <div id="vue_app">
+            <h1> <b>{{ brand }}</b> <i>{{ model }}</i> <span>{{ reg_year }}</span></h1>  
+            <h2>Age: {{ car_age }}</h2>
+         </div>
+ 
+         <script src="https://unpkg.com/vue@next"></script>
+         <script>
+             let app = Vue.createApp({
+                 data() {return{
+                    brand: 'Toyota', 
+                    model:'Land Cruiser', 
+                    reg_year:2015
+                 }},
+                /* We can create properties using the function syntax 
+                * or the object syntax
+                */
+                 computed: {
+                    car_age() {
+                        return new Date().getFullYear() - this.reg_year
+                    },
+                    full_name: {
+                        get() {
+                            return this.brand + ' ' + this.model
+                        },
+                        set(newName) {
+                            this.brand = newName[0]
+                            this.model = newName[1]
+                        }
+                    }
+                 }
+             })
+ 
+             let vm = app.mount('#vue_app')
+         </script>
+     </body>
+ 
+ </html>
